@@ -5,9 +5,6 @@ const tourRouter = require('./routes/tourRoutes.js');
 const userRouter = require('./routes/userRoutes.js');
 
 
-
-
-
 const app = express();
 
 //middlewares
