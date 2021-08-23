@@ -1,5 +1,26 @@
-const { lineJoin } = require("pdfkit");
 const Tour = require("../models/Tour");
+
+// class APIfeatures {
+//   constructor(query, queryString) {
+//     this.query = query;
+//     this.queryString = queryString;
+//   }
+
+//   filter() {
+//     //1. FILTERING
+//     const queryObj = { ...this.req.query };
+//     const excludeFields = ["page", "sort", "limit", "fields"];
+//     excludeFields.forEach((el) => delete queryObj[el]);
+//     //console.log(req.query,queryObj);
+
+//     //2. ADVANCED FILTERING
+//     let queryStr = JSON.stringify(queryObj);
+//     queryStr = queryStr.replace(/\b(gte|gt|lte|lt)\b/g, (match) => `$${match}`);
+
+//     this.query.find(JSON.parse(queryStr));
+//     //let query = Tour.find(JSON.parse(queryStr));
+//   }
+// }
 
 exports.getAllTours = async (req, res) => {
   try {
@@ -42,7 +63,8 @@ exports.getAllTours = async (req, res) => {
 
     //Execute the query
     //query.sort().select().skip().limit()
-    const tours = await query;
+    //const features = new APIfeatures(Tour.find(), req.query).filter();
+    const tours = await query.find();
 
     res.status(200).json({
       status: "success",

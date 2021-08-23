@@ -35,7 +35,8 @@
     "nodemon": "^2.0.12"
   },
   "scripts": {
-    "start":"nodemon app.js"
+    "start":"nodemon app.js",
+    "debug":"ndb app.js"
   },
   "author": "Ryan Mwakio",
   "license": "MIT"
