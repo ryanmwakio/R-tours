@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "dependencies": {
-    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
     "compression": "^1.7.4",
     "connect-flash": "^0.1.1",
     "cookie-parser": "^1.4.5",
@@ -29,14 +29,18 @@
     "pug": "^3.0.2",
     "sequelize": "^6.6.5",
     "sharp": "^0.28.3",
+    "validator": "^13.6.0",
     "xss-clean": "^0.1.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.12"
   },
+  "engines": {
+    "node": ">=13"
+  },
   "scripts": {
-    "start":"nodemon app.js",
-    "debug":"ndb app.js"
+    "start": "nodemon app.js",
+    "debug": "ndb app.js"
   },
   "author": "Ryan Mwakio",
   "license": "MIT"
